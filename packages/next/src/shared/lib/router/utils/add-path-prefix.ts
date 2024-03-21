@@ -5,7 +5,7 @@ import { parsePath } from './parse-path'
  * is indeed starting with a slash.
  */
 export function addPathPrefix(path: string, prefix?: string) {
-  if (!path.startsWith('/') || !prefix) {
+  if (!prefix || !path.startsWith('/')) {
     return path
   }
 
